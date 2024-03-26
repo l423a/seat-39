@@ -25,12 +25,12 @@ export default async function decorate(block) {
     // find the first entry that's title matches our quotee
     quotee = quotees.data.find(({ title }) => title.toLowerCase() === quotee.toLowerCase());
     if (quotee) {
-        const { path } = quotee;
-        const a = document.createElement('a');
-        a.href = path;
-        a.append(...par.childNodes);
-        moveInstrumentation(par, a);
-        par.replaceChildren(a);
+      const { path } = quotee;
+      const a = document.createElement('a');
+      a.href = path;
+      a.append(...par.childNodes);
+      moveInstrumentation(par, a);
+      par.replaceChildren(a);
     }
   }
 }
